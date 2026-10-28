@@ -1,0 +1,23 @@
+# dependencies
+node_modules/
+
+# secrets / environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# build output
+dist/
+.vercel/
+
+# logs & OS/editor files
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# prompt files (prompt.txt contains a database connection string)
+prompt*.txt

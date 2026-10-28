@@ -1,4 +1,8 @@
 import swaggerJsdoc from 'swagger-jsdoc';
+import { fileURLToPath } from 'node:url';
+
+// absolute path: cwd differs on Vercel, so a relative glob finds no files
+const routesFile = fileURLToPath(new URL('./routes.js', import.meta.url));
 
 export const spec = swaggerJsdoc({
   definition: {
@@ -24,5 +28,5 @@ export const spec = swaggerJsdoc({
       },
     },
   },
-  apis: ['./src/routes.js'],
+  apis: [routesFile],
 });
